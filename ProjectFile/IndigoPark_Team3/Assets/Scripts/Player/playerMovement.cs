@@ -14,6 +14,7 @@ public class playerMovement : MonoBehaviour
     [SerializeField] private bool isWalking = false;
 
     private Vector3 initialPosition;
+    private Vector3 initalRotation;
     #endregion
 
     #region MouseAndCameraVariables
@@ -23,6 +24,8 @@ public class playerMovement : MonoBehaviour
     public Camera playerCamera;
     public float amplitude = 0.1f;  // Height of bobbing effect
     public float frequency = 1.0f;  // Speed of bobbing effect
+    public float returnSpeed = 5f; // Speed at which the camera returns to the original position
+
     #endregion
 
     #region ShootVariables
@@ -87,7 +90,6 @@ public class playerMovement : MonoBehaviour
 
         _characterController.Move(moveDirection * Time.deltaTime);
 
-        // Camera bob effect
         if (isWalking)
         {
             float newY = initialPosition.y + Mathf.Sin(Time.time * frequency) * amplitude;
@@ -96,13 +98,23 @@ public class playerMovement : MonoBehaviour
         }
         else
         {
-            playerCamera.transform.localPosition = initialPosition;
+            // Smoothly interpolate back to the initial position
+            playerCamera.transform.localPosition = Vector3.Lerp(
+                playerCamera.transform.localPosition,
+                initialPosition,
+                Time.deltaTime * returnSpeed
+            );
             Debug.Log("Camera reset, initialPosition: " + initialPosition);
         }
     }
-    
+    // Method to set whether the player is walking or not
+    public void SetWalking(bool walking)
+    {
+        isWalking = walking;
+    }
 
-    private void HandleRotation()
+
+private void HandleRotation()
     {
         if (canMove)
         {
