@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: fc847208c722d274c9d42b7f2f13bf07, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: a31e2c31af678b143bf45e40c8a681da, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -255,7 +255,7 @@ MonoBehaviour:
   playerCamera: {fileID: 963194227}
   amplitude: 0.1
   frequency: 5
-  returnSpeed: 5
+  smoothTime: 0.1
   Shoot: 0
 --- !u!143 &164823724
 CharacterController:
@@ -311,7 +311,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.85699725, b: 0.4198113, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
