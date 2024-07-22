@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
-    #region MovementVariables
+     #region MovementVariables
     [Header("Movement")]
     public float walkSpeed = 6f;
     public float runSpeed = 12f;
@@ -14,7 +14,7 @@ public class playerMovement : MonoBehaviour
     [SerializeField] private bool isWalking = false;
 
     private Vector3 initialPosition;
-    private Vector3 initalRotation;
+    private Vector3 velocity = Vector3.zero; // For SmoothDamp
     #endregion
 
     #region MouseAndCameraVariables
@@ -24,7 +24,7 @@ public class playerMovement : MonoBehaviour
     public Camera playerCamera;
     public float amplitude = 0.1f;  // Height of bobbing effect
     public float frequency = 1.0f;  // Speed of bobbing effect
-    public float returnSpeed = 5f; // Speed at which the camera returns to the original position
+    public float smoothTime = 0.1f; // Time for smooth transitions
 
     #endregion
 
@@ -48,7 +48,7 @@ public class playerMovement : MonoBehaviour
         _characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        
+
         // CAM bob effect
         initialPosition = playerCamera.transform.localPosition;
     }
@@ -70,7 +70,7 @@ public class playerMovement : MonoBehaviour
         float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
-        
+
         isWalking = curSpeedX != 0 || curSpeedY != 0;
 
         // Jumping
@@ -90,31 +90,32 @@ public class playerMovement : MonoBehaviour
 
         _characterController.Move(moveDirection * Time.deltaTime);
 
+        // Smoothly interpolate between current and target positions
+        Vector3 targetPosition = initialPosition;
         if (isWalking)
         {
-            float newY = initialPosition.y + Mathf.Sin(Time.time * frequency) * amplitude;
-            playerCamera.transform.localPosition = new Vector3(initialPosition.x, newY, initialPosition.z);
-            Debug.Log("Camera bobbing, newY: " + newY);
-        }
-        else
-        {
-            // Smoothly interpolate back to the initial position
-            playerCamera.transform.localPosition = Vector3.Lerp(
-                playerCamera.transform.localPosition,
-                initialPosition,
-                Time.deltaTime * returnSpeed
+            targetPosition = new Vector3(
+                initialPosition.x,
+                initialPosition.y + Mathf.Sin(Time.time * frequency) * amplitude,
+                initialPosition.z
             );
-            Debug.Log("Camera reset, initialPosition: " + initialPosition);
         }
+
+        playerCamera.transform.localPosition = Vector3.SmoothDamp(
+            playerCamera.transform.localPosition,
+            targetPosition,
+            ref velocity,
+            smoothTime
+        );
     }
+
     // Method to set whether the player is walking or not
     public void SetWalking(bool walking)
     {
         isWalking = walking;
     }
 
-
-private void HandleRotation()
+    private void HandleRotation()
     {
         if (canMove)
         {
