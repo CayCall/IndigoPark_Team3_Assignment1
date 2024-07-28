@@ -9,6 +9,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Flashlight/Flashlight.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Temp/Compiled-Standard.shader" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -84,6 +85,8 @@
       <workItem from="1721661602632" duration="594000" />
       <workItem from="1721671568630" duration="462000" />
       <workItem from="1721672086038" duration="198000" />
+      <workItem from="1722152620323" duration="895000" />
+      <workItem from="1722171289007" duration="439000" />
     </task>
     <servers />
   </component>
