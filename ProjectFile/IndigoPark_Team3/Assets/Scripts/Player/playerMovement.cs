@@ -5,42 +5,41 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
      #region MovementVariables
-    [Header("Movement")]
-    public float walkSpeed = 6f;
-    public float runSpeed = 12f;
-    public float JumpPower = 7f;
-    public float gravity = 10f;
+        [Header("Movement")]
+        public float walkSpeed = 6f;
+        public float runSpeed = 12f;
+        public float JumpPower = 7f;
+        public float gravity = 10f;
 
-    [SerializeField] private bool isWalking = false;
+        [SerializeField] private bool isWalking = false;
 
-    private Vector3 initialPosition;
-    private Vector3 velocity = Vector3.zero; // For SmoothDamp
+        private Vector3 initialPosition;
+        private Vector3 velocity = Vector3.zero; // For SmoothDamp
     #endregion
 
     #region MouseAndCameraVariables
-    [Header("Mouse look & Camera")]
-    public float lookSpeed = 2f;
-    public float lookXLimit = 45f;
-    public Camera playerCamera;
-    public float amplitude = 0.1f;  // Height of bobbing effect
-    public float frequency = 1.0f;  // Speed of bobbing effect
-    public float smoothTime = 0.1f; // Time for smooth transitions
-
+        [Header("Mouse look & Camera")]
+        public float lookSpeed = 2f;
+        public float lookXLimit = 45f;
+        public Camera playerCamera;
+        public float amplitude = 0.1f;  // Height of bobbing effect
+        public float frequency = 1.0f;  // Speed of bobbing effect
+        public float smoothTime = 0.1f; // Time for smooth transitions
     #endregion
 
     #region ShootVariables
     [Header("Shoot")]
-    public bool Shoot;
+        public bool Shoot;
     #endregion
 
     #region PrivateVariables
-    private Vector3 moveDirection = Vector3.zero;
-    private float rotationX = 0;
-    private bool canMove = true;
+        private Vector3 moveDirection = Vector3.zero;
+        private float rotationX = 0;
+        private bool canMove = true;
     #endregion
 
     #region PrivateScriptReferences
-    private CharacterController _characterController;
+        private CharacterController _characterController;
     #endregion
 
     void Start()
