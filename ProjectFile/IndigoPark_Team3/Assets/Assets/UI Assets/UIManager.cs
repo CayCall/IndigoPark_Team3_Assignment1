@@ -4,12 +4,12 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     public string SceneName;
-    private void QuitGame()
+    public void QuitGame()
     {
         Application.Quit();
     }
 
-    private void NewScene()
+    public void NewScene()
     {
         SceneManager.LoadScene(SceneName);
     }
