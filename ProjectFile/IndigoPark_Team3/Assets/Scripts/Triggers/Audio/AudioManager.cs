@@ -22,7 +22,7 @@ public class AudioManager : MonoBehaviour
 
     private Dictionary<string, AudioClip> audioClipDictionary;
 
-    public UnityEvent onAudioComplete; // UnityEvent for signaling when audio completes
+    public UnityEvent onAudioComplete; 
 
     private void Awake()
     {
@@ -35,8 +35,7 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        // Initialize the UnityEvent if it hasn't been set in the Inspector
+        
         if (onAudioComplete == null)
         {
             onAudioComplete = new UnityEvent();
@@ -70,6 +69,6 @@ public class AudioManager : MonoBehaviour
     private IEnumerator WaitForAudioToEnd(float duration)
     {
         yield return new WaitForSeconds(duration);
-        onAudioComplete?.Invoke(); // Invoke the event when the audio finishes
+        onAudioComplete?.Invoke(); 
     }
 }

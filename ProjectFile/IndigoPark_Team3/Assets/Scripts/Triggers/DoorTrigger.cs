@@ -6,16 +6,17 @@ public class DoorTrigger : MonoBehaviour
 {
     [SerializeField] private Animator ani;
     [SerializeField] private bool PlayerFound;
-
-    private void Update()
+    private AudioSource _doorSound;
+    private void Start()
     {
-        
+        _doorSound = GameObject.Find("OfficeDoor_Trigger").GetComponent<AudioSource>();
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            PlayerFound = true;     
+            PlayerFound = true;
+            _doorSound.Play();
         }
         
         if (PlayerFound)

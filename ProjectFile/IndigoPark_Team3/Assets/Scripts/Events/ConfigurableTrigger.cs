@@ -35,33 +35,33 @@ public class ConfigurableTrigger : MonoBehaviour
             switch (currentEvent)
             {
                 case EventType.IntroduceRumbley:
-                    triggerEvent.PlayAudio(audioSource, audioClip); // Modified to pass audioClip
+                    triggerEvent.PlayAudio(audioSource, audioClip); 
                     triggerEvent.PlayParticle(particleSystem);
                     break;
 
                 case EventType.InteractWithRumbley:
-                    triggerEvent.PlayAudio(audioSource, audioClip); // Modified to pass audioClip
+                    triggerEvent.PlayAudio(audioSource, audioClip); 
                     break;
 
                 case EventType.GoToMainGate:
                     triggerEvent.ShowUI(uiElement);
-                    triggerEvent.PlayAudio(audioSource, audioClip); // Modified to pass audioClip
+                    triggerEvent.PlayAudio(audioSource, audioClip); 
                     triggerEvent.OpenDoor(doorAnimator);
                     break;
 
                 case EventType.StartGenerator:
                     triggerEvent.ActivateObjects(gears);
-                    triggerEvent.PlayAudio(audioSource, audioClip); // Modified to pass audioClip
+                    triggerEvent.PlayAudio(audioSource, audioClip); 
                     triggerEvent.EnableLights(lights);
                     break;
 
                 case EventType.OpenMainDoor:
-                    triggerEvent.PlayAudio(audioSource, audioClip); // Modified to pass audioClip
+                    triggerEvent.PlayAudio(audioSource, audioClip); 
                     triggerEvent.OpenDoor(doorAnimator);
                     break;
 
                 case EventType.ReceiveCritterCuff:
-                    triggerEvent.PlayAudio(audioSource, audioClip); // Modified to pass audioClip
+                    triggerEvent.PlayAudio(audioSource, audioClip); 
                     triggerEvent.OpenDoor(doorAnimator);
                     break;
 

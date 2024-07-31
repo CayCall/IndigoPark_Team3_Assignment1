@@ -73,14 +73,7 @@ public class playerMovement : MonoBehaviour
         isWalking = curSpeedX != 0 || curSpeedY != 0;
 
         // Jumping
-        if (Input.GetButton("Jump") && canMove && _characterController.isGrounded)
-        {
-            moveDirection.y = JumpPower;
-        }
-        else
-        {
-            moveDirection.y = movementDirectionY;
-        }
+
 
         if (!_characterController.isGrounded)
         {
