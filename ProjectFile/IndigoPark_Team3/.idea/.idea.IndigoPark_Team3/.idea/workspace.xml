@@ -9,6 +9,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Flashlight/Flashlight.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Triggers/Audio/AudioTrigger.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -88,6 +89,7 @@
       <workItem from="1722171289007" duration="439000" />
       <workItem from="1722184578952" duration="770000" />
       <workItem from="1722252565961" duration="1469000" />
+      <workItem from="1722416054473" duration="3262000" />
     </task>
     <servers />
   </component>
