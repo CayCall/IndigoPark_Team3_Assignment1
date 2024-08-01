@@ -32,6 +32,7 @@ public class AudioTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Enetered");
         if (!hasBeenTriggered && other.CompareTag("Player"))
         {
             if (AudioManager.instance != null)
