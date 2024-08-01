@@ -10,6 +10,8 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private LayerMask layerMask;
     [SerializeField] private gearsInventory inventory;
 
+    [SerializeField] private GameObject CritterCuff;
+
     private void Start()
     {
         uiCamera = Camera.main;
@@ -44,4 +46,11 @@ public class PlayerInteraction : MonoBehaviour
         inventory.gearsController = gearList.ToArray();
         Destroy(gear.gameObject);
     }
+
+    private void pickupCritterCuff()
+    {
+               
+    }
+    
+    
 }
