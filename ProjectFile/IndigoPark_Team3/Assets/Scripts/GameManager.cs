@@ -7,8 +7,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager GMinstance;
     
-    [SerializeField] private GameObject[] Lights;
-    //[SerializeField] private GameObject critterCuff;
+
+    [SerializeField] public GameObject[] Lights;
+    [SerializeField] private Generator Gen;
+
     private void Awake()
     {
         if (GMinstance == null)
@@ -24,14 +26,11 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        //critterCuff = GameObject.Find("CritterCuff").GetComponent
+        Gen = GameObject.Find("minigenerator").GetComponent<Generator>();
     }
 
     private void Update()
     {
-        for (int i = 10; i < Lights.Length; i++)
-        {
-            gameObject.SetActive(true);    
-        }
+        // Your existing update logic if any
     }
 }
