@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class gearsInventory : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  
+    [SerializeField] public Gears[] gearsController;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        gearsController = new Gears[0];
     }
 }

@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 1183850846887174646}
   - component: {fileID: 755274896899985947}
   - component: {fileID: 870790674183590499}
+  - component: {fileID: 5016891925846642784}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -342,7 +343,7 @@ MonoBehaviour:
   walkSpeed: 2.5
   runSpeed: 4
   JumpPower: 0
-  gravity: 10
+  gravity: 100
   isWalking: 0
   lookSpeed: 2
   lookXLimit: 45
@@ -363,6 +364,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32520641c9c3dcc4ba2f13a9ebf66bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distance: 3
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  inventory: {fileID: 5016891925846642784}
+--- !u!114 &5016891925846642784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9149368372517792492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be2e57d2cdc85df4eb5d95dfe0066823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gearsController: []
 --- !u!1001 &2485278469493581379
 PrefabInstance:
   m_ObjectHideFlags: 0
