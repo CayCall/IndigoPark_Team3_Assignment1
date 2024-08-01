@@ -7,8 +7,15 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager GMinstance;
     
-    [SerializeField] private GameObject[] Lights;
+    //Scene 1
+    [SerializeField] public GameObject[] Lights;
+    [SerializeField]  public GearsController[] gearsController;
     //[SerializeField] private GameObject critterCuff;
+    [SerializeField] private Generator Gen;
+    
+    
+    //Scene 2
+    
     private void Awake()
     {
         if (GMinstance == null)
@@ -21,17 +28,14 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    private void Start()
+    //Scene 1
+    private void startGenerator()
     {
-        //critterCuff = GameObject.Find("CritterCuff").GetComponent
+        Gen.GeneratorStart();           
     }
-
-    private void Update()
-    {
-        for (int i = 10; i < Lights.Length; i++)
-        {
-            gameObject.SetActive(true);    
-        }
-    }
+    
+    
+    //Scene 2
+    
+    
 }
