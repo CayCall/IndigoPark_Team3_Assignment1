@@ -9,6 +9,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Flashlight/Flashlight.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GearsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/Generator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Triggers/Audio/AudioTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Triggers/TriggerGeneratorRoom.cs" root0="FORCE_HIGHLIGHTING" />
@@ -95,6 +97,8 @@
       <workItem from="1722447373735" duration="4383000" />
       <workItem from="1722463679767" duration="2584000" />
       <workItem from="1722466814615" duration="4000" />
+      <workItem from="1722500936984" duration="70000" />
+      <workItem from="1722501037279" duration="2832000" />
     </task>
     <servers />
   </component>
