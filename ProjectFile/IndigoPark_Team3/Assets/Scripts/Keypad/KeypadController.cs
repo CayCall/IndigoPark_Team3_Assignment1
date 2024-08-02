@@ -10,6 +10,8 @@ public class KeypadController : MonoBehaviour
     public int passwordLimit;
     public Text passwordText;
 
+    public GameObject SceneChange;
+
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip correctSound;
@@ -57,6 +59,7 @@ public class KeypadController : MonoBehaviour
 
             passwordText.color = Color.green;
             StartCoroutine(waitAndClear());
+            SceneChange.SetActive(true);
         }
         else
         {
