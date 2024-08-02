@@ -45,6 +45,7 @@ public class CritterPickUp : MonoBehaviour
         {
             CritterUI.SetActive(true);
             CritterCuff.transform.position += new Vector3(0, -1, 0);
+            Text.transform.position += new Vector3(0, -10, 0);
             Text.SetActive(false);
             Destroy(block);
         }
