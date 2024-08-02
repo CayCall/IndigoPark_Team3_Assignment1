@@ -11,6 +11,12 @@ public class EndVideoManager : MonoBehaviour
 
     public bool VideoSkip = false;
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
     private void Update()
     {
         if (VideoSkip == false)

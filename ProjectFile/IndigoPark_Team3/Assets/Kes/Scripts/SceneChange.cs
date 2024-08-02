@@ -9,23 +9,7 @@ public class SceneChange : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            LoadNextScene();
-        }
-    }
-
-    private void LoadNextScene()
-    {
-        // Load the next scene in the build settings order
-        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-
-        // Check if the next scene index is valid
-        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
-        {
-            SceneManager.LoadScene(nextSceneIndex);
-        }
-        else
-        {
-            Debug.LogWarning("No more scenes to load!");
+            SceneManager.LoadScene("KesTest");
         }
     }
 }

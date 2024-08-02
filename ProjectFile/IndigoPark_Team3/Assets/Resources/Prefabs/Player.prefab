@@ -384,6 +384,7 @@ GameObject:
   - component: {fileID: 870790674183590499}
   - component: {fileID: 5016891925846642784}
   - component: {fileID: 6933953387395762736}
+  - component: {fileID: 6664026695817298378}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -519,8 +520,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e065a8df9dc94ff41b7f1bdb02f49667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 2.5
-  runSpeed: 4
+  walkSpeed: 4
+  runSpeed: 10
   JumpPower: 0
   gravity: 10000
   isWalking: 0
@@ -543,7 +544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32520641c9c3dcc4ba2f13a9ebf66bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 4
+  distance: 5
   layerMask:
     serializedVersion: 2
     m_Bits: 1
@@ -575,6 +576,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headPos: {fileID: 7966150434000739036}
+--- !u!114 &6664026695817298378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9149368372517792492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea65207a01c6ff4585b5cae1d8f104d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportPoint: {fileID: 0}
 --- !u!1001 &2485278469493581379
 PrefabInstance:
   m_ObjectHideFlags: 0
