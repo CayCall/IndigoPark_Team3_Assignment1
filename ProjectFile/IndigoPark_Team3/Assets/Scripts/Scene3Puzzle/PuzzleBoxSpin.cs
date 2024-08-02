@@ -8,7 +8,6 @@ public class PuzzleBoxSpin : MonoBehaviour
     [SerializeField] private string boxIdentifier; 
     private PuzzleManager puzzleManager;
     
-    // Rotation amount in degrees
     public float rotationAmount = 90f;
     public float rotationDuration = 1f;  
 

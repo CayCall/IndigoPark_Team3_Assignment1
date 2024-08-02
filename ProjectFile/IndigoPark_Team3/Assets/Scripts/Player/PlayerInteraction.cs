@@ -27,8 +27,7 @@ public class PlayerInteraction : MonoBehaviour
 
             Gears gear = hitInfo.collider.GetComponent<Gears>();
             Generator generator = hitInfo.collider.GetComponent<Generator>();
-
-            // Check if the hit object has the "Box" tag
+            
             if (hitInfo.collider.CompareTag("PuzzleBox"))
             {
                 PuzzleBoxSpin boxSpin = hitInfo.collider.GetComponent<PuzzleBoxSpin>();
