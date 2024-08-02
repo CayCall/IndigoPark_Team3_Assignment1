@@ -11,6 +11,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Flashlight/Flashlight.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/Generator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene3Puzzle/PuzzleBoxSpin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene3Puzzle/PuzzleManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Triggers/Audio/AudioTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Triggers/OfficeDoor/officeDoorTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Triggers/TriggerGeneratorRoom.cs" root0="FORCE_HIGHLIGHTING" />
@@ -29,6 +31,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -102,7 +105,8 @@
       <workItem from="1722522340028" duration="856000" />
       <workItem from="1722590259875" duration="2434000" />
       <workItem from="1722595908690" duration="3506000" />
-      <workItem from="1722601322266" duration="3574000" />
+      <workItem from="1722601322266" duration="6600000" />
+      <workItem from="1722614161268" duration="792000" />
     </task>
     <servers />
   </component>

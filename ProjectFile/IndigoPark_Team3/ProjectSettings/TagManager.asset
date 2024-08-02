@@ -8,6 +8,7 @@ TagManager:
   - Playerz
   - Teleporter
   - SecondTeleporter
+  - PuzzleShapeCounter
   layers:
   - Default
   - TransparentFX
