@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
- 
     private Camera uiCamera;
     [SerializeField] private float distance = 3f;
     [SerializeField] private LayerMask layerMask;
@@ -25,8 +24,21 @@ public class PlayerInteraction : MonoBehaviour
 
         if (Physics.Raycast(ray, out hitInfo, distance, layerMask))
         {
+
             Gears gear = hitInfo.collider.GetComponent<Gears>();
             Generator generator = hitInfo.collider.GetComponent<Generator>();
+
+            // Check if the hit object has the "Box" tag
+            if (hitInfo.collider.CompareTag("PuzzleBox"))
+            {
+                PuzzleBoxSpin boxSpin = hitInfo.collider.GetComponent<PuzzleBoxSpin>();
+
+                if (boxSpin != null && Input.GetKeyDown(KeyCode.F) && !boxSpin.IsRotating())
+                {
+                    Debug.Log("Box detected: " + hitInfo.collider.name);
+                    boxSpin.StartRotation();
+                }
+            }
 
             if (gear != null && Input.GetKeyDown(KeyCode.F))
             {
@@ -46,11 +58,4 @@ public class PlayerInteraction : MonoBehaviour
         inventory.gearsController = gearList.ToArray();
         Destroy(gear.gameObject);
     }
-
-    private void pickupCritterCuff()
-    {
-               
-    }
-    
-    
 }

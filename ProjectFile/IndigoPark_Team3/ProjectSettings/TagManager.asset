@@ -9,6 +9,7 @@ TagManager:
   - Teleporter
   - SecondTeleporter
   - PuzzleShapeCounter
+  - PuzzleBox
   layers:
   - Default
   - TransparentFX

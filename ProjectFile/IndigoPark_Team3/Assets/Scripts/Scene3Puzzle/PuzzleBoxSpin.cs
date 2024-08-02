@@ -5,32 +5,33 @@ using UnityEngine;
 
 public class PuzzleBoxSpin : MonoBehaviour
 {
-    [SerializeField] private string boxIdentifier; // Unique identifier for each box
-    [SerializeField] private PuzzleManager puzzleManager; // Reference to PuzzleManager
-
+    [SerializeField] private string boxIdentifier; 
+    private PuzzleManager puzzleManager;
+    
     // Rotation amount in degrees
     public float rotationAmount = 90f;
-    public float rotationDuration = 1f;  // Duration of the rotation in seconds
+    public float rotationDuration = 1f;  
 
     private float currentYRotation;
     private bool isRotating = false;
 
     void Start()
     {
-        // Ensure PuzzleManager is assigned
-        if (puzzleManager == null)
-        {
-            puzzleManager = GameObject.Find("PuzzleManager").GetComponent<PuzzleManager>();
-        }
+        puzzleManager = GameObject.Find("PuzzleManager").GetComponent<PuzzleManager>();
         currentYRotation = transform.localRotation.eulerAngles.y;
     }
 
-    void Update()
+    public void StartRotation()
     {
-        if (Input.GetKeyDown(KeyCode.R) && !isRotating)
+        if (!isRotating)
         {
             StartCoroutine(RotateObject());
         }
+    }
+
+    public bool IsRotating()
+    {
+        return isRotating;
     }
 
     IEnumerator RotateObject()
@@ -62,9 +63,7 @@ public class PuzzleBoxSpin : MonoBehaviour
         if (other.CompareTag("PuzzleShapeCounter"))
         {
             puzzleManager.IncrementShapeCounter(boxIdentifier);
-            Debug.Log($"Box {boxIdentifier} collided");
+            GetComponent<Collider>().enabled = false;
         }
     }
 }
- 
-
