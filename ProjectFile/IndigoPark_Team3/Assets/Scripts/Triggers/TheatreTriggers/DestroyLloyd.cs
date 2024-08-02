@@ -9,7 +9,7 @@ public class DestroyLloyd : MonoBehaviour
 
     public IEnumerator Destroyed()
     {
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(7.0f);
         Destroy(LloydModel);
     }
 
