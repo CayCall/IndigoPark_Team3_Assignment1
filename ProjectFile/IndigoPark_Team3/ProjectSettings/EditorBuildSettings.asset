@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/KesTest.unity
     guid: d56edb57c7e765c4899a696cf13bb3cc
   - enabled: 1
+    path: Assets/Scenes/LandingPadS3.unity
+    guid: 97ec4ffb2c4ff8541bb1fea399872d06
+  - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: f069a8591227f034b8eb3e8d34f3da00
   m_configObjects: {}
