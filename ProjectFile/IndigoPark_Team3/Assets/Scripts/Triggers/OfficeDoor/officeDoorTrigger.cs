@@ -23,7 +23,7 @@ public class officeDoorTrigger : MonoBehaviour
         
         if (PlayerFound)
         {
-            ani.SetInteger("Animstate", 1);
+            ani.SetInteger("AnimState", 1);
         }
     }
 
@@ -36,7 +36,7 @@ public class officeDoorTrigger : MonoBehaviour
 
         if (PlayerFound == false)
         {
-            ani.SetInteger("Animstate", 2);
+            ani.SetInteger("AnimState", 2);
         }
     }
 }
