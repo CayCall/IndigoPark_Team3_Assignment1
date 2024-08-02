@@ -5,8 +5,9 @@ using UnityEngine;
 public class Generator : MonoBehaviour
 {
    private GameManager gameManager;
-   private gearsInventory gearsInventory;
-   public AudioSource genClick;
+    private gearsInventory gearsInventory;
+    public GameObject Text;
+    public AudioSource genClick;
    public AudioSource genSound;
 
    private void Start()
@@ -27,6 +28,8 @@ public class Generator : MonoBehaviour
          }
          genSound.gameObject.SetActive(true);
          genSound.Play();
+         Text.SetActive(false);
       }
+
    }
 }
