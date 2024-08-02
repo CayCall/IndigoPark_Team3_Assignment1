@@ -12,6 +12,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/Generator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Triggers/Audio/AudioTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Triggers/OfficeDoor/officeDoorTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Triggers/TriggerGeneratorRoom.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -101,7 +102,7 @@
       <workItem from="1722522340028" duration="856000" />
       <workItem from="1722590259875" duration="2434000" />
       <workItem from="1722595908690" duration="3506000" />
-      <workItem from="1722601322266" duration="295000" />
+      <workItem from="1722601322266" duration="3574000" />
     </task>
     <servers />
   </component>
